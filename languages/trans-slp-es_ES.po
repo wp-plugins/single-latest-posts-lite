@@ -1,0 +1,505 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Single Latest Posts v1.0\n"
+"POT-Creation-Date: 2012-10-28 18:09+0100\n"
+"PO-Revision-Date: 2012-10-28 18:09+0100\n"
+"Last-Translator: Jose Luis Sayago Rojas <jose.sayago@laelite.info>\n"
+"Language-Team: L'Elite <opensource@laelite.info>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../single-latest-posts.php:222
+msgid "Sorry, I could not find content matching your parameters."
+msgstr "Lo siento, no pude encontrar nada que coincidiera con esos parámetros."
+
+#: ../single-latest-posts.php:342 ../single-latest-posts.php:344
+#: ../single-latest-posts.php:420 ../single-latest-posts.php:422
+#: ../single-latest-posts.php:582 ../single-latest-posts.php:585
+#: ../single-latest-posts.php:661 ../single-latest-posts.php:664
+msgid ", "
+msgstr ","
+
+#: ../single-latest-posts.php:346 ../single-latest-posts.php:424
+#: ../single-latest-posts.php:587 ../single-latest-posts.php:666
+#, php-format
+msgid ""
+"This entry was posted in %1$s and tagged %2$s by <a href=\"%6$s\">%5$s</a>. "
+"Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+"Esta entrada fue publicada en %1$s y marcada como %2$s por <a href=\"%6$s\">"
+"%5$s</a>. Enlace <a href=\"%3$s\" title=\"Enlace permanente a %4$s\" rel="
+"\"bookmark\">permanente</a>."
+
+#: ../single-latest-posts.php:348 ../single-latest-posts.php:426
+#: ../single-latest-posts.php:589 ../single-latest-posts.php:668
+#, php-format
+msgid ""
+"This entry was posted in %1$s by <a href=\"%6$s\">%5$s</a>. Bookmark the <a "
+"href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"Esta entrada fue publicada en %1$s por <a href=\"%6$s\">%5$s</a>. Enlace <a "
+"href=\"%3$s\" title=\"Enlace permanente a %4$s\" rel=\"bookmark"
+"\">permanente</a>."
+
+#: ../single-latest-posts.php:350 ../single-latest-posts.php:428
+#: ../single-latest-posts.php:591 ../single-latest-posts.php:670
+#, php-format
+msgid ""
+"This entry was posted by <a href=\"%6$s\">%5$s</a>. Bookmark the <a href="
+"\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"Esta entrada fue publicada por <a href=\"%6$s\">%5$s</a>. Enlace <a href="
+"\"%3$s\" title=\"Enlace permanente a %4$s\" rel=\"bookmark\">permanente</a>."
+
+#: ../single-latest-posts.php:456
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: ../single-latest-posts.php:457
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: ../single-latest-posts.php:784 ../single-latest-posts.php:789
+#: ../single-latest-posts.php:791 ../single-latest-posts.php:796
+msgid "more"
+msgstr "más"
+
+#: ../single-latest-posts.php:932 ../single-latest-posts.php:933
+msgid "Single Latest Posts"
+msgstr "Single Latest Posts"
+
+#: ../core/classes/single-latest-posts-widget.php:74
+msgid "Single Latest Posts Lite Widget"
+msgstr "Single Latest Posts Lite Widget"
+
+#: ../core/classes/single-latest-posts-widget.php:184
+#: ../core/js/slposts_shortcode_form.php:99
+msgid "General Settings"
+msgstr "Configuración General"
+
+#: ../core/classes/single-latest-posts-widget.php:189
+#: ../core/js/slposts_shortcode_form.php:112
+msgid "Title"
+msgstr "Título"
+
+#: ../core/classes/single-latest-posts-widget.php:195
+#: ../core/js/slposts_shortcode_form.php:118
+msgid "Titles Only"
+msgstr "Solo Títulos"
+
+#: ../core/classes/single-latest-posts-widget.php:199
+#: ../core/classes/single-latest-posts-widget.php:202
+#: ../core/classes/single-latest-posts-widget.php:266
+#: ../core/classes/single-latest-posts-widget.php:269
+#: ../core/classes/single-latest-posts-widget.php:294
+#: ../core/classes/single-latest-posts-widget.php:297
+#: ../core/classes/single-latest-posts-widget.php:315
+#: ../core/classes/single-latest-posts-widget.php:318
+#: ../core/js/slposts_shortcode_form.php:122
+#: ../core/js/slposts_shortcode_form.php:125
+#: ../core/js/slposts_shortcode_form.php:192
+#: ../core/js/slposts_shortcode_form.php:195
+#: ../core/js/slposts_shortcode_form.php:220
+#: ../core/js/slposts_shortcode_form.php:223
+#: ../core/js/slposts_shortcode_form.php:234
+#: ../core/js/slposts_shortcode_form.php:237
+#: ../core/js/slposts_shortcode_form.php:256
+#: ../core/js/slposts_shortcode_form.php:259
+msgid "Yes"
+msgstr "Sí"
+
+#: ../core/classes/single-latest-posts-widget.php:200
+#: ../core/classes/single-latest-posts-widget.php:203
+#: ../core/classes/single-latest-posts-widget.php:267
+#: ../core/classes/single-latest-posts-widget.php:270
+#: ../core/classes/single-latest-posts-widget.php:295
+#: ../core/classes/single-latest-posts-widget.php:298
+#: ../core/classes/single-latest-posts-widget.php:316
+#: ../core/classes/single-latest-posts-widget.php:319
+#: ../core/js/slposts_shortcode_form.php:123
+#: ../core/js/slposts_shortcode_form.php:126
+#: ../core/js/slposts_shortcode_form.php:193
+#: ../core/js/slposts_shortcode_form.php:196
+#: ../core/js/slposts_shortcode_form.php:221
+#: ../core/js/slposts_shortcode_form.php:224
+#: ../core/js/slposts_shortcode_form.php:235
+#: ../core/js/slposts_shortcode_form.php:238
+#: ../core/js/slposts_shortcode_form.php:257
+#: ../core/js/slposts_shortcode_form.php:260
+msgid "No"
+msgstr "No"
+
+#: ../core/classes/single-latest-posts-widget.php:211
+msgid "Posts Settings"
+msgstr "Configuración de Artículos"
+
+#: ../core/classes/single-latest-posts-widget.php:216
+#: ../core/js/slposts_shortcode_form.php:145
+msgid "Number of Posts"
+msgstr "Número de Artículos"
+
+#: ../core/classes/single-latest-posts-widget.php:222
+#: ../core/js/slposts_shortcode_form.php:151
+msgid "Time Frame in Days"
+msgstr "Días de Antigüedad"
+
+#: ../core/classes/single-latest-posts-widget.php:228
+#: ../core/js/slposts_shortcode_form.php:158
+msgid "Post Status"
+msgstr "Estado del Artículo"
+
+#: ../core/classes/single-latest-posts-widget.php:244
+#: ../core/js/slposts_shortcode_form.php:170
+msgid "Category"
+msgstr "Categoría"
+
+#: ../core/classes/single-latest-posts-widget.php:250
+#: ../core/js/slposts_shortcode_form.php:176
+msgid "Tag"
+msgstr "Etiqueta"
+
+#: ../core/classes/single-latest-posts-widget.php:256
+#: ../core/js/slposts_shortcode_form.php:182
+msgid "Excerpt Length"
+msgstr "Longitud de Extractos"
+
+#: ../core/classes/single-latest-posts-widget.php:262
+#: ../core/js/slposts_shortcode_form.php:188
+msgid "Auto-Excerpt"
+msgstr "Auto-Extractos"
+
+#: ../core/classes/single-latest-posts-widget.php:276
+#: ../core/js/slposts_shortcode_form.php:202
+msgid "Excerpt Trail"
+msgstr "Cola del Extracto"
+
+#: ../core/classes/single-latest-posts-widget.php:280
+#: ../core/classes/single-latest-posts-widget.php:283
+#: ../core/js/slposts_shortcode_form.php:206
+#: ../core/js/slposts_shortcode_form.php:209
+msgid "Text"
+msgstr "Texto"
+
+#: ../core/classes/single-latest-posts-widget.php:281
+#: ../core/classes/single-latest-posts-widget.php:284
+#: ../core/js/slposts_shortcode_form.php:207
+#: ../core/js/slposts_shortcode_form.php:210
+msgid "Image"
+msgstr "Imagen"
+
+#: ../core/classes/single-latest-posts-widget.php:290
+#: ../core/js/slposts_shortcode_form.php:216
+msgid "Full Metadata"
+msgstr "Metadatos Completos"
+
+#: ../core/classes/single-latest-posts-widget.php:306
+msgid "Pagination & Sorting"
+msgstr "Paginación & Orden"
+
+#: ../core/classes/single-latest-posts-widget.php:311
+#: ../core/js/slposts_shortcode_form.php:252
+msgid "Paginate Results"
+msgstr "Resultados por Página"
+
+#: ../core/classes/single-latest-posts-widget.php:325
+#: ../core/js/slposts_shortcode_form.php:266
+msgid "Posts per Page"
+msgstr "Número de Artículos por Página"
+
+#: ../core/classes/single-latest-posts-widget.php:332
+#: ../core/js/slposts_shortcode_form.php:102
+msgid "Thumbnails"
+msgstr "Imágenes"
+
+#: ../core/classes/single-latest-posts-widget.php:337
+#: ../core/js/slposts_shortcode_form.php:281
+msgid "Display Thumbnails"
+msgstr "Imágenes Destacadas"
+
+#: ../core/classes/single-latest-posts-widget.php:341
+#: ../core/classes/single-latest-posts-widget.php:344
+#: ../core/js/slposts_shortcode_form.php:285
+#: ../core/js/slposts_shortcode_form.php:288
+msgid "Show"
+msgstr "Mostrar"
+
+#: ../core/classes/single-latest-posts-widget.php:342
+#: ../core/classes/single-latest-posts-widget.php:345
+#: ../core/js/slposts_shortcode_form.php:286
+#: ../core/js/slposts_shortcode_form.php:289
+msgid "Hide"
+msgstr "Ocultar"
+
+#: ../core/classes/single-latest-posts-widget.php:352
+#: ../core/js/slposts_shortcode_form.php:296
+msgid "Thumbnail Size"
+msgstr "Tamaño de Imágenes"
+
+#: ../core/classes/single-latest-posts-widget.php:353
+#: ../core/js/slposts_shortcode_form.php:297
+msgid "Width"
+msgstr "Ancho"
+
+#: ../core/classes/single-latest-posts-widget.php:357
+#: ../core/js/slposts_shortcode_form.php:301
+msgid "Height"
+msgstr "Alto"
+
+#: ../core/classes/single-latest-posts-widget.php:363
+#: ../core/js/slposts_shortcode_form.php:307
+msgid "Thumbnail Replacement"
+msgstr "Reemplazo de Imágenes"
+
+#: ../core/classes/single-latest-posts-widget.php:368
+#: ../core/classes/single-latest-posts-widget.php:373
+#: ../core/classes/single-latest-posts-widget.php:378
+#: ../core/classes/single-latest-posts-widget.php:383
+#: ../core/js/slposts_shortcode_form.php:312
+#: ../core/js/slposts_shortcode_form.php:317
+#: ../core/js/slposts_shortcode_form.php:322
+#: ../core/js/slposts_shortcode_form.php:327
+msgid "Placeholder"
+msgstr "Relleno por Defecto"
+
+#: ../core/classes/single-latest-posts-widget.php:369
+#: ../core/classes/single-latest-posts-widget.php:374
+#: ../core/classes/single-latest-posts-widget.php:379
+#: ../core/classes/single-latest-posts-widget.php:384
+#: ../core/js/slposts_shortcode_form.php:313
+#: ../core/js/slposts_shortcode_form.php:318
+#: ../core/js/slposts_shortcode_form.php:323
+#: ../core/js/slposts_shortcode_form.php:328
+msgid "Kittens"
+msgstr "Gatitos"
+
+#: ../core/classes/single-latest-posts-widget.php:370
+#: ../core/classes/single-latest-posts-widget.php:375
+#: ../core/classes/single-latest-posts-widget.php:380
+#: ../core/classes/single-latest-posts-widget.php:385
+#: ../core/js/slposts_shortcode_form.php:314
+#: ../core/js/slposts_shortcode_form.php:319
+#: ../core/js/slposts_shortcode_form.php:324
+#: ../core/js/slposts_shortcode_form.php:329
+msgid "Puppies"
+msgstr "Perritos"
+
+#: ../core/classes/single-latest-posts-widget.php:392
+#: ../core/js/slposts_shortcode_form.php:336
+msgid "Thumbnail Class"
+msgstr "Clase CSS para Imágenes"
+
+#: ../core/classes/single-latest-posts-widget.php:400
+#: ../core/js/slposts_shortcode_form.php:103
+msgid "Style Settings"
+msgstr "Estilos"
+
+#: ../core/classes/single-latest-posts-widget.php:405
+#: ../core/js/slposts_shortcode_form.php:349
+msgid "Display Type"
+msgstr "Estilo Visual"
+
+#: ../core/classes/single-latest-posts-widget.php:411
+#: ../core/classes/single-latest-posts-widget.php:417
+#: ../core/classes/single-latest-posts-widget.php:423
+#: ../core/classes/single-latest-posts-widget.php:429
+#: ../core/js/slposts_shortcode_form.php:355
+#: ../core/js/slposts_shortcode_form.php:361
+#: ../core/js/slposts_shortcode_form.php:367
+#: ../core/js/slposts_shortcode_form.php:373
+msgid "Unordered List"
+msgstr "Lista no Ordenada"
+
+#: ../core/classes/single-latest-posts-widget.php:412
+#: ../core/classes/single-latest-posts-widget.php:418
+#: ../core/classes/single-latest-posts-widget.php:424
+#: ../core/classes/single-latest-posts-widget.php:430
+#: ../core/js/slposts_shortcode_form.php:356
+#: ../core/js/slposts_shortcode_form.php:362
+#: ../core/js/slposts_shortcode_form.php:368
+#: ../core/js/slposts_shortcode_form.php:374
+msgid "Ordered List"
+msgstr "Lista Ordenada"
+
+#: ../core/classes/single-latest-posts-widget.php:413
+#: ../core/classes/single-latest-posts-widget.php:419
+#: ../core/classes/single-latest-posts-widget.php:425
+#: ../core/classes/single-latest-posts-widget.php:431
+#: ../core/js/slposts_shortcode_form.php:357
+#: ../core/js/slposts_shortcode_form.php:363
+#: ../core/js/slposts_shortcode_form.php:369
+#: ../core/js/slposts_shortcode_form.php:375
+msgid "Blocks"
+msgstr "Bloques"
+
+#: ../core/classes/single-latest-posts-widget.php:438
+#: ../core/js/slposts_shortcode_form.php:382
+msgid "Custom CSS Filename"
+msgstr "Nombre del Archivo CSS Personalizado"
+
+#: ../core/classes/single-latest-posts-widget.php:444
+#: ../core/js/slposts_shortcode_form.php:388
+msgid "Custom CSS Class for the list wrapper"
+msgstr "Clase CSS para el Contenedor de Listas"
+
+#: ../core/classes/single-latest-posts-widget.php:450
+#: ../core/js/slposts_shortcode_form.php:394
+msgid "Custom CSS Class for the block wrapper"
+msgstr "Clase CSS para el Contenedor de Bloques"
+
+#: ../core/js/slposts_shortcode_form.php:94
+msgid "Single Latest Posts Shortcode Settings"
+msgstr "Opciones del Shortcode de Single Latest Posts"
+
+#: ../core/js/slposts_shortcode_form.php:100
+msgid "Posts"
+msgstr "Artículos"
+
+#: ../core/js/slposts_shortcode_form.php:101
+msgid "Pagination"
+msgstr "Paginación"
+
+#: ../core/js/slposts_shortcode_form.php:132
+msgid "Instance Identifier"
+msgstr "Identificador de Instancia"
+
+#: ../core/js/slposts_shortcode_form.php:137
+#: ../core/js/slposts_shortcode_form.php:243
+#: ../core/js/slposts_shortcode_form.php:271
+#: ../core/js/slposts_shortcode_form.php:341
+#: ../core/js/slposts_shortcode_form.php:399
+msgid "Insert Shortcode"
+msgstr "Crear el Shortcode"
+
+#: ../core/js/slposts_shortcode_form.php:230
+msgid "Display Comments"
+msgstr "Mostrar Comentarios"
+
+#~ msgid "Single Latest Posts Settings"
+#~ msgstr "Configuración de Single Latest Posts"
+
+#~ msgid "Reset License"
+#~ msgstr "Borrar esta Licencia"
+
+#~ msgid "Delete Custom Thumbnail"
+#~ msgstr "Borrar la Imagen Previa Personalizada"
+
+#~ msgid "Delete Custom CSS Style"
+#~ msgstr "Borrar el fichero CSS personalizado"
+
+#~ msgid "Single Latest Posts License"
+#~ msgstr "Licencia de Single Latest Posts"
+
+#~ msgid "License Code"
+#~ msgstr "Licencia"
+
+#~ msgid "Custom Thumbnail Filler URL"
+#~ msgstr "URL de la Imagen Previa Personalizada"
+
+#~ msgid "Image URL"
+#~ msgstr "URL de la Imagen"
+
+#~ msgid "Default CSS File"
+#~ msgstr "Archivo CSS por defecto"
+
+#~ msgid "File name"
+#~ msgstr "Nombre del Fichero"
+
+#~ msgid "The default CSS file must be stored inside your active theme folder."
+#~ msgstr ""
+#~ "El fichero CSS por defecto debe ser almacenado dentro del directorio del "
+#~ "tema WordPress activo."
+
+#~ msgid "Follow L'Elite on"
+#~ msgstr "Sigue a L'Elite en"
+
+#~ msgid "Please enter your license code to activate your copy."
+#~ msgstr "Para activar tu copia, por favor ingresa el código de tu licencia."
+
+#~ msgid "Go to the settings page"
+#~ msgstr "Ir a la página de configuración"
+
+#~ msgid "Need a license code? Click here and get one now."
+#~ msgstr "¿Necesitas una licencia? Haz clic aquí y obtén una ahora."
+
+#~ msgid "A new major version has been released."
+#~ msgstr "Una versión mayor ha sido liberada."
+
+#~ msgid "Click here and upgrade now."
+#~ msgstr "Haz clic aquí y actualiza ahora."
+
+#~ msgid "Settings saved."
+#~ msgstr "Configuración guardada."
+
+#~ msgid "Number of Posts by Blog"
+#~ msgstr "Numero de Artículos"
+
+#~ msgid "Custom Post Type"
+#~ msgstr "Tipo de Artículos Personalizados"
+
+#~ msgid "or"
+#~ msgstr "o"
+
+#~ msgid "Categories"
+#~ msgstr "Categorías"
+
+#~ msgid "Category(ies)"
+#~ msgstr "Categorías"
+
+#~ msgid "Tags"
+#~ msgstr "Etiquetas"
+
+#~ msgid "Tag(s)"
+#~ msgstr "Etiqueta(s)"
+
+#~ msgid "Random Posts"
+#~ msgstr "Artículos Aleatorios"
+
+#~ msgid "Sort by Date"
+#~ msgstr "Ordenar por Fechas"
+
+#~ msgid "Sorting Order"
+#~ msgstr "Ordenar de"
+
+#~ msgid "Newest to Oldest"
+#~ msgstr "Nuevos a Antiguos"
+
+#~ msgid "Oldest to Newest"
+#~ msgstr "Antiguos a Nuevos"
+
+#~ msgid "Total Number of Posts"
+#~ msgstr "Número Total de Artículos"
+
+#~ msgid "Published on"
+#~ msgstr "Publicado el"
+
+#~ msgid "by"
+#~ msgstr "por"
+
+#~ msgid "Display Blog"
+#~ msgstr "Mostrar Blog"
+
+#~ msgid "Blogs"
+#~ msgstr "Blogs"
+
+#~ msgid "Display Blog(s)"
+#~ msgstr "Mostrar Blog(s)"
+
+#~ msgid "Display All"
+#~ msgstr "Mostrar Todo"
+
+#~ msgid "Ignore Blog"
+#~ msgstr "Ignorar Blog"
+
+#~ msgid "Ignore Blog(s)"
+#~ msgstr "Ignorar Blog(s)"
+
+#~ msgid "Nothing to Ignore"
+#~ msgstr "No Ignorar Nada"
