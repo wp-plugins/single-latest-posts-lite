@@ -78,6 +78,12 @@ are passed. For more examples please visit the Network Latest Post website.
 = 1.0 =
 * Initial release
 
+== Screenshots ==
+1. Posts Output
+2. Multi-instance Widget
+3. Shortcodes
+4. TinyMCE Form to set shortcodes
+
 == Frequently Asked Questions ==
 
 = What do I need in order to make this plugin work for me? =
