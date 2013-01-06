@@ -3,7 +3,7 @@
 Plugin Name: Single Latest Posts Lite
 Plugin URI: http://wordpress.org/extend/plugins/single-latest-posts-lite/
 Description: Display the latest posts available in your WordPress blog using functions, shortcodes or widgets.
-Version: 1.2
+Version: 1.2.1
 Author: L'Elite
 Author URI: http://laelite.info/
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -288,6 +288,8 @@ function single_latest_posts( $parameters ) {
                             break;
                     }
                 }
+                // Caption Wrapper
+                echo $html_tags['caption_o'];
                 // Open title box
                 echo $html_tags['title_o'];
                 // Print the title
@@ -361,11 +363,15 @@ function single_latest_posts( $parameters ) {
                     );
                     echo $html_tags['meta_fc'];
                 }
+                // Caption Wrapper
+                echo $html_tags['caption_c'];
                 // Close thumbnail item placeholder
                 echo $html_tags['thumbnail_ic'];
                 // Close thumbnail container
                 echo $html_tags['thumbnail_c'];
             } else {
+                // Caption Wrapper
+                echo $html_tags['caption_o'];
                 // Open title box
                 echo $html_tags['title_o'];
                 // Print the title
@@ -439,6 +445,8 @@ function single_latest_posts( $parameters ) {
                     );
                     echo $html_tags['meta_fc'];
                 }
+                // Caption Wrapper
+                echo $html_tags['caption_c'];
             }
             // Close item box
             echo $html_tags['item_c'];
@@ -528,6 +536,8 @@ function single_latest_posts( $parameters ) {
                             break;
                     }
                 }
+                // Caption Wrapper
+                echo $html_tags['caption_o'];
                 // Open title box
                 echo $html_tags['title_o'];
                 // Print the title
@@ -602,11 +612,15 @@ function single_latest_posts( $parameters ) {
                     );
                     echo $html_tags['meta_fc'];
                 }
+                // Caption Wrapper
+                echo $html_tags['caption_c'];
                 // Close thumbnail item placeholder
                 echo $html_tags['thumbnail_ic'];
                 // Close thumbnail container
                 echo $html_tags['thumbnail_c'];
             } else {
+                // Caption Wrapper
+                echo $html_tags['caption_o'];
                 // Open title box
                 echo $html_tags['title_o'];
                 // Print the title
@@ -681,6 +695,8 @@ function single_latest_posts( $parameters ) {
                     );
                     echo $html_tags['meta_fc'];
                 }
+                // Caption Wrapper
+                echo $html_tags['caption_c'];
             }
             // Close item box
             echo $html_tags['item_c'];
@@ -833,7 +849,9 @@ function slp_display_type($display_type, $instance, $wrapper_list_css, $wrapper_
                 'title_o' => "<h3 class='slposts-ulist-title'>",
                 'title_c' => "</h3>",
                 'excerpt_o' => "<ul class='slposts-ulist-excerpt'><li>",
-                'excerpt_c' => "</li></ul>"
+                'excerpt_c' => "</li></ul>",
+                'caption_o' => "<div class='slposts-caption'>",
+                'caption_c' => "</div>"
             );
             break;
         // Ordered list
@@ -860,7 +878,9 @@ function slp_display_type($display_type, $instance, $wrapper_list_css, $wrapper_
                 'title_o' => "<h3 class='slposts-olist-title'>",
                 'title_c' => "</h3>",
                 'excerpt_o' => "<ul class='slposts-olist-excerpt'><li>",
-                'excerpt_c' => "</li></ul>"
+                'excerpt_c' => "</li></ul>",
+                'caption_o' => "<div class='slposts-caption'>",
+                'caption_c' => "</div>"
             );
             break;
         // Block
@@ -887,7 +907,9 @@ function slp_display_type($display_type, $instance, $wrapper_list_css, $wrapper_
                 'title_o' => "<h3 class='slposts-block-title'>",
                 'title_c' => "</h3>",
                 'excerpt_o' => "<div class='slposts-block-excerpt'><p>",
-                'excerpt_c' => "</p></div>"
+                'excerpt_c' => "</p></div>",
+                'caption_o' => "<div class='slposts-caption'>",
+                'caption_c' => "</div>"
             );
             break;
         default:
@@ -914,7 +936,9 @@ function slp_display_type($display_type, $instance, $wrapper_list_css, $wrapper_
                 'title_o' => "<h3 class='slposts-ulist-title'>",
                 'title_c' => "</h3>",
                 'excerpt_o' => "<ul class='slposts-ulist-excerpt'><li>",
-                'excerpt_c' => "</li></ul>"
+                'excerpt_c' => "</li></ul>",
+                'caption_o' => "<div class='slposts-caption'>",
+                'caption_c' => "</div>"
             );
             break;
     }

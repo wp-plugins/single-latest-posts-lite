@@ -4,7 +4,7 @@ Donate link: http://laelite.info
 Tags: recent posts, shortcode, widget, latest posts, single installation
 Requires at least: 3.0
 Tested up to: 3.5
-Stable tag: 1.2
+Stable tag: 1.2.1
 
 This plugin allows you to pull all the recent posts from your WordPress blog and display them the way you want
 
@@ -75,6 +75,9 @@ are passed. For more examples please visit the Network Latest Post website.
 
 == Changelog ==
 
+= 1.2.1 =
+* HTML improvement to simplify visual customization
+
 = 1.2 =
 * Loading jQuery UI libraries included in the WordPress core
 
@@ -106,4 +109,4 @@ Not in this version, you can buy Single Latest Posts (pro) which includes custom
 Single Latest Posts (pro) allows you to display posts from multiple categories and/or tags. Please visit http://single-latest-posts.laelitenetwork.com
 
 = What else is missing from the Lite version? =
-Random posts, sorting capabilities, custom thumbnails and custom default stylesheets options.
+Full post content, random posts, sorting capabilities, custom thumbnails and custom default stylesheets options.
