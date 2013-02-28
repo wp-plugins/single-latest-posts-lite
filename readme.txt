@@ -4,7 +4,7 @@ Donate link: http://laelite.info
 Tags: recent posts, shortcode, widget, latest posts, single installation
 Requires at least: 3.0
 Tested up to: 3.5
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 
 This plugin allows you to pull all the recent posts from your WordPress blog and display them the way you want
 
@@ -74,6 +74,9 @@ are passed. For more examples please visit the Network Latest Post website.
 * @instance           : This parameter is intended to differenciate each instance of the widget/shortcode/function you use, it's required in order for the asynchronous pagination links to work
 
 == Changelog ==
+
+= 1.2.2 =
+* Bug fix: widget thumbnail size was being reset by default data.
 
 = 1.2.1 =
 * HTML improvement to simplify visual customization

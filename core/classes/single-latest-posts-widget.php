@@ -1,7 +1,7 @@
 <?php
 /*
  * Single Latest Posts Lite Widget
- * Version 1.0
+ * Version 1.2.2
  * Author L'Elite
  * Author URI http://laelite.info/
  * License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -169,8 +169,6 @@ class SLposts_Widget extends WP_Widget {
         global $wpdb;
         $status_list = $wpdb->get_results("SELECT DISTINCT post_status FROM $wpdb->posts");
         $type_list = $wpdb->get_col("SELECT DISTINCT post_type FROM $wpdb->posts");
-        $thumbnail_w = 150;
-        $thumbnail_h = 150;
         // Parse & Merge the passed values with the default ones
         $instance = wp_parse_args( $instance, $this->defaults );
         // Extract elements as variables
