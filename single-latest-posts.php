@@ -3,7 +3,7 @@
 Plugin Name: Single Latest Posts Lite
 Plugin URI: http://wordpress.org/extend/plugins/single-latest-posts-lite/
 Description: Display the latest posts available in your WordPress blog using functions, shortcodes or widgets.
-Version: 1.2.2
+Version: 1.2.3
 Author: L'Elite
 Author URI: http://laelite.info/
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -301,8 +301,8 @@ function single_latest_posts( $parameters ) {
                     echo $html_tags['meta_o'];
                     // Set metainfo
                     $author = get_user_by('id',$field->post_author);
-                    $dateobj = new DateTime(trim($field->post_date));
-                    $datepost = $dateobj->format("$date_format");
+                    $format = get_option('date_format');
+                    $datepost = date_i18n($format, strtotime(trim( $field->post_date) ) );
                     $author_url = get_author_posts_url($author->ID);
                     if( $display_comments === 'true' ) {
                         $comments_args = array(
@@ -383,8 +383,8 @@ function single_latest_posts( $parameters ) {
                     echo $html_tags['meta_o'];
                     // Set metainfo
                     $author = get_user_by('id',$field->post_author);
-                    $dateobj = new DateTime(trim($field->post_date));
-                    $datepost = $dateobj->format("$date_format");
+                    $format = get_option('date_format');
+                    $datepost = date_i18n($format, strtotime(trim( $field->post_date) ) );
                     $author_url = get_author_posts_url($author->ID);
                     if( $display_comments === 'true' ) {
                         $comments_args = array(
@@ -550,8 +550,8 @@ function single_latest_posts( $parameters ) {
                     echo $html_tags['meta_o'];
                     // Set metainfo
                     $author = get_user_by('id',$field->post_author);
-                    $dateobj = new DateTime(trim($field->post_date));
-                    $datepost = $dateobj->format("$date_format");
+                    $format = get_option('date_format');
+                    $datepost = date_i18n($format, strtotime(trim( $field->post_date) ) );
                     $author_url = get_author_posts_url($author->ID);
                     if( $display_comments === 'true' ) {
                         $comments_args = array(
@@ -633,8 +633,8 @@ function single_latest_posts( $parameters ) {
                     echo $html_tags['meta_o'];
                     // Set metainfo
                     $author = get_user_by('id',$field->post_author);
-                    $dateobj = new DateTime(trim($field->post_date));
-                    $datepost = $dateobj->format("$date_format");
+                    $format = get_option('date_format');
+                    $datepost = date_i18n($format, strtotime(trim( $field->post_date) ) );
                     $author_url = get_author_posts_url($author->ID);
                     if( $display_comments === 'true' ) {
                         $comments_args = array(
