@@ -3,7 +3,7 @@
 Plugin Name: Single Latest Posts Lite
 Plugin URI: http://wordpress.org/extend/plugins/single-latest-posts-lite/
 Description: Display the latest posts available in your WordPress blog using functions, shortcodes or widgets.
-Version: 1.2.3
+Version: 1.2.4
 Author: L'Elite
 Author URI: http://laelite.info/
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -100,8 +100,19 @@ function single_latest_posts( $parameters ) {
     // Paranoid mode activated (yes I'm a security freak)
     foreach($settings as $parameter => $value) {
         if( !is_array( $value ) ) {
-            // Strip everything
-            $settings[$parameter] = strip_tags($value);
+            if( !is_numeric($value) 
+                && $parameter != 'title' 
+                && $parameter != 'instance'
+                && $parameter != 'thumbnail_class'
+                && $parameter != 'css_style'
+                && $parameter != 'wrapper_list_css'
+                && $parameter != 'wrapper_block_css' ) {
+                // Strip & lowercase everything
+                $settings[$parameter] = trim( strip_tags( strtolower( $value ) ) );
+            } else {
+                // Strip everything
+                $settings[$parameter] = strip_tags($value);
+            }
         }
     }
     // Extract each parameter as its own variable
@@ -333,8 +344,14 @@ function single_latest_posts( $parameters ) {
                         echo slp_custom_excerpt($excerpt_length, $field->post_excerpt, $all_permalinks[$field->guid],$excerpt_trail);
                     // Extract excerpt from content
                     } else {
-                        // Get the excerpt
-                        echo slp_custom_excerpt($excerpt_length, $field->post_content, $all_permalinks[$field->guid],$excerpt_trail);
+                        // If post has excerpt then print that
+                        if( !empty( $field->post_excerpt ) ) {
+                            echo slp_custom_excerpt( $excerpt_length, $field->post_excerpt, $all_permalinks[$field->guid],$excerpt_trail );
+                        // Otherwise, create one from content
+                        } else {
+                            // Get the excerpt
+                            echo slp_custom_excerpt($excerpt_length, $field->post_content, $all_permalinks[$field->guid],$excerpt_trail);
+                        }
                     }
                     // Close excerpt wrapper
                     echo $html_tags['excerpt_c'];
@@ -415,8 +432,14 @@ function single_latest_posts( $parameters ) {
                         echo slp_custom_excerpt($excerpt_length, $field->post_excerpt, $all_permalinks[$field->guid],$excerpt_trail);
                     // Extract excerpt from content
                     } else {
-                        // Get the excerpt
-                        echo slp_custom_excerpt($excerpt_length, $field->post_content, $all_permalinks[$field->guid],$excerpt_trail);
+                        // If post has excerpt then print that
+                        if( !empty( $field->post_excerpt ) ) {
+                            echo slp_custom_excerpt( $excerpt_length, $field->post_excerpt, $all_permalinks[$field->guid],$excerpt_trail );
+                        // Otherwise, create one from content
+                        } else {
+                            // Get the excerpt
+                            echo slp_custom_excerpt($excerpt_length, $field->post_content, $all_permalinks[$field->guid],$excerpt_trail);
+                        }
                     }
                     // Close excerpt wrapper
                     echo $html_tags['excerpt_c'];
@@ -582,8 +605,14 @@ function single_latest_posts( $parameters ) {
                         echo slp_custom_excerpt($excerpt_length, $field->post_excerpt, $all_permalinks[$field->guid],$excerpt_trail);
                     // Extract excerpt from content
                     } else {
-                        // Get the excerpt
-                        echo slp_custom_excerpt($excerpt_length, $field->post_content, $all_permalinks[$field->guid],$excerpt_trail);
+                        // If post has excerpt then print that
+                        if( !empty( $field->post_excerpt ) ) {
+                            echo slp_custom_excerpt( $excerpt_length, $field->post_excerpt, $all_permalinks[$field->guid],$excerpt_trail );
+                        // Otherwise, create one from content
+                        } else {
+                            // Get the excerpt
+                            echo slp_custom_excerpt($excerpt_length, $field->post_content, $all_permalinks[$field->guid],$excerpt_trail);
+                        }
                     }
                     // Close excerpt wrapper
                     echo $html_tags['excerpt_c'];
@@ -665,8 +694,14 @@ function single_latest_posts( $parameters ) {
                         echo slp_custom_excerpt($excerpt_length, $field->post_excerpt, $all_permalinks[$field->guid],$excerpt_trail);
                     // Extract excerpt from content
                     } else {
-                        // Get the excerpt
-                        echo slp_custom_excerpt($excerpt_length, $field->post_content, $all_permalinks[$field->guid],$excerpt_trail);
+                        // If post has excerpt then print that
+                        if( !empty( $field->post_excerpt ) ) {
+                            echo slp_custom_excerpt( $excerpt_length, $field->post_excerpt, $all_permalinks[$field->guid],$excerpt_trail );
+                        // Otherwise, create one from content
+                        } else {
+                            // Get the excerpt
+                            echo slp_custom_excerpt($excerpt_length, $field->post_content, $all_permalinks[$field->guid],$excerpt_trail);
+                        }
                     }
                     // Close excerpt wrapper
                     echo $html_tags['excerpt_c'];
@@ -788,8 +823,11 @@ function slp_custom_excerpt($count, $content, $permalink, $excerpt_trail){
     $content = strip_tags($content);
     // Get the words
     $words = explode(' ', $content, $count + 1);
-    // Pop everything
-    array_pop($words);
+    // Check if the content exceeds the number of words specified
+    if( count($words) > $count ) {
+        // Pop off the rest
+        array_pop($words);
+    }
     // Add trailing dots
     array_push($words, '...');
     // Add white spaces

@@ -1,7 +1,7 @@
 <?php
 /*
  * Single Latest Posts Lite Configuration
- * Version: 1.2.3
+ * Version: 1.2.4
  * Author: L'Elite
  * Author URI: http://laelite.info/
  * License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -20,7 +20,7 @@
 $slp_root = dirname( __FILE__ );
 define( 'SLPosts_Root', $slp_root, true );
 // Current Version
-define( 'SLPosts_Version', '1.2.3', true );
+define( 'SLPosts_Version', '1.2.4', true );
 // Classes
 require_once dirname( __FILE__ ) . '/core/classes/single-latest-posts-widget.php';
 ?>

@@ -4,7 +4,7 @@ Donate link: http://laelite.info
 Tags: recent posts, shortcode, widget, latest posts, single installation
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 
 This plugin allows you to pull all the recent posts from your WordPress blog and display them the way you want
 
@@ -74,6 +74,11 @@ are passed. For more examples please visit the Network Latest Post website.
 * @instance           : This parameter is intended to differenciate each instance of the widget/shortcode/function you use, it's required in order for the asynchronous pagination links to work
 
 == Changelog ==
+
+= 1.2.4 =
+* Improvement: now when using auto_excerpt=true, excerpts will be generated only for posts without one.
+* Bug fix: excerpts were cropped exceeding the value specified through the excerpt_length parameter.
+* Bug fix: parameters containing uppercase values were being ignored.
 
 = 1.2.3 =
 * Added support for translated date formats.
