@@ -3,7 +3,7 @@
 Plugin Name: Single Latest Posts Lite
 Plugin URI: http://wordpress.org/extend/plugins/single-latest-posts-lite/
 Description: Display the latest posts available in your WordPress blog using functions, shortcodes or widgets.
-Version: 1.2.4
+Version: 1.2.5
 Author: L'Elite
 Author URI: http://laelite.info/
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -827,9 +827,12 @@ function slp_custom_excerpt($count, $content, $permalink, $excerpt_trail){
     if( count($words) > $count ) {
         // Pop off the rest
         array_pop($words);
+        // Add ellipsis
+        array_push($words, '...');
+    } else {
+        // Add a blank space
+        array_push($words, ' ');
     }
-    // Add trailing dots
-    array_push($words, '...');
     // Add white spaces
     $content = implode(' ', $words);
     // Add the trail
