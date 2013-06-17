@@ -1,13 +1,13 @@
 <?php
 /*
  * Single Latest Posts Lite Widget
- * Version 1.2.5
+ * Version 1.3
  * Author L'Elite
  * Author URI http://laelite.info/
  * License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
  */
 /* 
- * Copyright 2007 - 2012 L'Elite de José SAYAGO (opensource@laelite.info)
+ * Copyright 2007 - 2013 L'Elite de José SAYAGO (opensource@laelite.info)
  * 'SLPosts Lite', 'SLPosts Pro', 'NLPosts' are unregistered trademarks of L'Elite, 
  * and cannot be re-used in conjuction with the GPL v2 usage of this software 
  * under the license terms of the GPL v2 without permission.
@@ -32,6 +32,7 @@ class SLposts_Widget extends WP_Widget {
         'title'            => NULL,          // Section title
         'title_only'       => TRUE,          // Display the post title only
         'instance'         => NULL,          // Instance identifier, used to uniquely differenciate each shortcode or widget used
+        'suppress_filters' => FALSE,         // Suppress Query Filters
         /*
          * Posts Settings
          */
@@ -130,6 +131,7 @@ class SLposts_Widget extends WP_Widget {
         $instance = array();
         // Get the values
         $instance['title']            = strip_tags($new_instance['title']);
+        $instance['suppress_filters'] = strip_tags($new_instance['suppress_filters']);
         $instance['number_posts']     = intval($new_instance['number_posts']);
         $instance['time_frame']       = intval($new_instance['time_frame']);
         $instance['title_only']       = strip_tags($new_instance['title_only']);
@@ -194,6 +196,20 @@ class SLposts_Widget extends WP_Widget {
                 $widget_form.= $br;
                 $widget_form.= "<select id='".$this->get_field_id('title_only')."' name='".$this->get_field_name('title_only')."'>";
                 if( $title_only == 'true' ) {
+                    $widget_form.= "<option value='true' selected='selected'>" . __('Yes','trans-slp') . "</option>";
+                    $widget_form.= "<option value='false'>" . __('No','trans-slp') . "</option>";
+                } else {
+                    $widget_form.= "<option value='true'>" . __('Yes','trans-slp') . "</option>";
+                    $widget_form.= "<option value='false' selected='selected'>" . __('No','trans-slp') . "</option>";
+                }
+                $widget_form.= "</select>";
+                $widget_form.= $br;
+
+                // ---- Suppress Filters
+                $widget_form.= "<label for='".$this->get_field_id('suppress_filters')."'>" . __('Suppress Query Filters','trans-slp') . "</label>";
+                $widget_form.= $br;
+                $widget_form.= "<select id='".$this->get_field_id('suppress_filters')."' name='".$this->get_field_name('suppress_filters')."'>";
+                if( $suppress_filters == 'true' ) {
                     $widget_form.= "<option value='true' selected='selected'>" . __('Yes','trans-slp') . "</option>";
                     $widget_form.= "<option value='false'>" . __('No','trans-slp') . "</option>";
                 } else {

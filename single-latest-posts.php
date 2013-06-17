@@ -3,13 +3,20 @@
 Plugin Name: Single Latest Posts Lite
 Plugin URI: http://wordpress.org/extend/plugins/single-latest-posts-lite/
 Description: Display the latest posts available in your WordPress blog using functions, shortcodes or widgets.
-Version: 1.2.5
+Version: 1.3
 Author: L'Elite
 Author URI: http://laelite.info/
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
 */
-/* 
- * Copyright 2007 - 2012 L'Elite de José SAYAGO (opensource@laelite.info)
+/***********************
+
+++++++ TERMINAR DE INTEGRAR EL FOOTER_META PARA SACAR (FALTAN WIDGET Y TINYMCE OPCIONES)
+++++++ VERSION 1.2.6
+
+************************/
+/**
+ *
+ * Copyright 2007 - 2013 L'Elite de José SAYAGO (opensource@laelite.info)
  * 'SLPosts Lite', 'SLPosts Pro', 'NLPosts' are unregistered trademarks of L'Elite, 
  * and cannot be re-used in conjuction with the GPL v2 usage of this software 
  * under the license terms of the GPL v2 without permission.
@@ -49,6 +56,7 @@ require_once dirname( __FILE__ ) . '/single-latest-posts-config.php';
  * -- @wrapper_list_css   : Custom CSS classes for the list wrapper
  * -- @wrapper_block_css  : Custom CSS classes for the block wrapper
  * -- @instance           : This parameter is intended to differentiate each instance of the widget/shortcode/function you use, it's required in order for the asynchronous pagination links to work
+ * -- @suppress_filters   : This parameter is specially useful when dealing with WP_Query custom filters, if you are using a plugin like Advanced Category Excluder then you must set this value to YES/TRUE
  */
 function single_latest_posts( $parameters ) {
     // Global variables
@@ -62,6 +70,7 @@ function single_latest_posts( $parameters ) {
         'title'            => NULL,          // Section title
         'title_only'       => TRUE,          // Display the post title only
         'instance'         => NULL,          // Instance identifier, used to uniquely differenciate each shortcode or widget used
+        'suppress_filters' => FALSE,         // Suppress query filters
         /*
          * Posts Settings
          */
@@ -74,6 +83,7 @@ function single_latest_posts( $parameters ) {
         'auto_excerpt'     => FALSE,         // Generate excerpt from content
         'excerpt_trail'    => 'text',        // Excerpt's trailing element: text, image
         'full_meta'        => FALSE,         // Display full metadata
+        'footer_meta'      => FALSE,         // Display footer metadata
         'display_comments' => FALSE,         // Display comments' count (true or false)
         /*
          * Pagination & Sorting
@@ -212,6 +222,10 @@ function single_latest_posts( $parameters ) {
             'orderby' => $orderby
         );
     }
+    // Suppress Query Filters
+    if( $suppress_filters == 'true' || $suppress_filters == true ) {
+        $args['suppress_filters'] = true;
+    }
     $posts_list = slp_get_posts($args, $time_frame);
     // Put everything inside an array for sorting purposes
     foreach( $posts_list as $post ) {
@@ -236,6 +250,10 @@ function single_latest_posts( $parameters ) {
         ';
         // Close the door and get out of here
         return;
+    }
+
+    if( function_exists( 'ace_init' ) ) {
+
     }
     // Open content box
     echo $html_tags['content_o'];
@@ -356,7 +374,7 @@ function single_latest_posts( $parameters ) {
                     // Close excerpt wrapper
                     echo $html_tags['excerpt_c'];
                 }
-                if( $full_meta == 'true' ) {
+                if( $full_meta == 'true' && $footer_meta == 'true' ) {
                     /* translators: used between list items, there is a space after the comma */
                     $categories_list = get_the_category_list( __( ', ', 'trans-slp' ) , '', $field->ID);
                     /* translators: used between list items, there is a space after the comma */
@@ -444,7 +462,7 @@ function single_latest_posts( $parameters ) {
                     // Close excerpt wrapper
                     echo $html_tags['excerpt_c'];
                 }
-                if( $full_meta == 'true' ) {
+                if( $full_meta == 'true' && $footer_meta == 'true' ) {
                     /* translators: used between list items, there is a space after the comma */
                     $categories_list = get_the_category_list( __( ', ', 'trans-slp' ) , '', $field->ID);
                     /* translators: used between list items, there is a space after the comma */
@@ -617,7 +635,7 @@ function single_latest_posts( $parameters ) {
                     // Close excerpt wrapper
                     echo $html_tags['excerpt_c'];
                 }
-                if( $full_meta == 'true' ) {
+                if( $full_meta == 'true' && $footer_meta == 'true' ) {
                     /* translators: used between list items, there is a space after the comma */
                     $categories_list = get_the_category_list( __( ', ', 'trans-slp' ) , '', $field->ID);
 
@@ -706,7 +724,7 @@ function single_latest_posts( $parameters ) {
                     // Close excerpt wrapper
                     echo $html_tags['excerpt_c'];
                 }
-                if( $full_meta == 'true' ) {
+                if( $full_meta == 'true' && $footer_meta == 'true' ) {
                     /* translators: used between list items, there is a space after the comma */
                     $categories_list = get_the_category_list( __( ', ', 'trans-slp' ) , '', $field->ID);
 
@@ -857,7 +875,8 @@ function slp_custom_excerpt($count, $content, $permalink, $excerpt_trail){
     // Return the excerpt
     return $content;
 }
-/* HTML tags
+/**
+ * HTML tags
  * Styling purposes
  * @display_type: ulist, olist, block, inline
  * return @html_tags
@@ -987,7 +1006,8 @@ function slp_display_type($display_type, $instance, $wrapper_list_css, $wrapper_
     // Return tags
     return $html_tags;
 }
-/* Init function
+/**
+ * Init function
  * Plugin initialization
  */
 function single_latest_posts_init() {
@@ -1005,14 +1025,15 @@ function single_latest_posts_init() {
     wp_enqueue_style('slpcss-juiform');
     register_uninstall_hook(__FILE__, 'single_latest_posts_uninstall');
 }
-/* 
+/**
  * Load Languages
  */
 function slp_load_languages() {
     // Set the textdomain for translation purposes
     load_plugin_textdomain('trans-slp', false, basename( dirname( __FILE__ ) ) . '/languages/');
 }
-/* Load Scripts
+/**
+ * Load Scripts
  * Load needed scripts and textdomain
  */
 function slp_load_scripts() {
@@ -1023,13 +1044,15 @@ function slp_load_scripts() {
     wp_enqueue_script('slpaccordion',plugin_dir_url(__FILE__) .'core/js/slposts-accordion.js');
     return;
 }
-/* Load jQuery
+/**
+ * Load jQuery
  */
 function slp_load_jquery() {
     wp_enqueue_script('jquery');
     return;
 }
-/* Load CSS Styles
+/**
+ * Load CSS Styles
  * Load front-end stylesheets
  */
 function slp_load_styles( $css_style ) {
@@ -1057,7 +1080,8 @@ function slp_load_styles( $css_style ) {
     }
     return;
 }
-/* Load Widget
+/**
+ * Load Widget
  * using create_function to support PHP versions < 5.3
  */
 add_action( 'widgets_init', create_function( '', '
@@ -1079,7 +1103,8 @@ add_action( 'widgets_init', create_function( '', '
     // Load the class
     return register_widget( "SLposts_Widget" );
 ' ) );
-/* Uninstall function
+/**
+ * Uninstall function
  * Provides uninstall capabilities
  */
 function single_latest_posts_uninstall() {
@@ -1088,7 +1113,7 @@ function single_latest_posts_uninstall() {
     // Delete the shortcode hook
     remove_shortcode('slposts');
 }
-/*
+/**
  * TinyMCE Shortcode Plugin
  * Add a slposts button to the TinyMCE editor
  * this will simplify the way it is used

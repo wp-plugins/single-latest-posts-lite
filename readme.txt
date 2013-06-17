@@ -4,7 +4,7 @@ Donate link: http://laelite.info
 Tags: recent posts, shortcode, widget, latest posts, single installation
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 1.2.5
+Stable tag: 1.3
 
 This plugin allows you to pull all the recent posts from your WordPress blog and display them the way you want
 
@@ -25,6 +25,7 @@ This is an just an example with the default values which means I could have used
 are passed. For more examples please visit the Network Latest Post website.
 
 `[slposts title=NULL
+          suppress_filters=FALSE
           number_posts=10
           time_frame=0
           title_only=TRUE
@@ -72,8 +73,12 @@ are passed. For more examples please visit the Network Latest Post website.
 * @wrapper_list_css   : Custom CSS classes for the list wrapper
 * @wrapper_block_css  : Custom CSS classes for the block wrapper
 * @instance           : This parameter is intended to differenciate each instance of the widget/shortcode/function you use, it's required in order for the asynchronous pagination links to work
+* @suppress_filters   : This parameter is specially useful when dealing with WP_Query custom filters, if you are using a plugin like Advanced Category Excluder then you must set this value to YES/TRUE
 
 == Changelog ==
+
+= 1.3 =
+* Improvement: Added suppress_filters parameter for third party plugins support. This parameter when set to TRUE reset query filters.
 
 = 1.2.5 =
 * Improvement: Ellipsis are now displayed only when excerpt length exceeds the limit specified through excerpt_length.

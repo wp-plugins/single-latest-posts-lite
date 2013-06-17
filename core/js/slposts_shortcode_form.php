@@ -1,7 +1,7 @@
 <?php
 /*
- * Single Latest Posts Shortcode Form
- * Version 1.0
+ * Single Latest Posts Lite Shortcode Form
+ * Version 1.3
  * Author L'Elite
  * Author URI http://laelite.info/
  * License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -53,6 +53,7 @@ $widget_obj = new SLposts_Widget();
 // Default values
 $defaults = array(
     'title'            => NULL,          // Widget title
+    'suppress_filters' => FALSE,         // Suppress Query Filters
     'number_posts'     => 10,            // Number of posts to be displayed
     'time_frame'       => 0,             // Time frame to look for posts in days
     'title_only'       => TRUE,          // Display the post title only
@@ -119,6 +120,20 @@ $widget_form.= "<div id='tab1'>";
     $widget_form.= $br;
     $widget_form.= "<select id='title_only' name='title_only'>";
     if( $title_only == 'true' ) {
+        $widget_form.= "<option value='true' selected='selected'>" . __('Yes','trans-slp') . "</option>";
+        $widget_form.= "<option value='false'>" . __('No','trans-slp') . "</option>";
+    } else {
+        $widget_form.= "<option value='true'>" . __('Yes','trans-slp') . "</option>";
+        $widget_form.= "<option value='false' selected='selected'>" . __('No','trans-slp') . "</option>";
+    }
+    $widget_form.= "</select>";
+    $widget_form.= $br;
+
+    // ---- Suppress Filters
+    $widget_form.= "<label for='suppress_filters'>" . __('Suppress Query Filters','trans-slp') . "</label>";
+    $widget_form.= $br;
+    $widget_form.= "<select id='suppress_filters' name='suppress_filters'>";
+    if( $suppress_filters == 'true' ) {
         $widget_form.= "<option value='true' selected='selected'>" . __('Yes','trans-slp') . "</option>";
         $widget_form.= "<option value='false'>" . __('No','trans-slp') . "</option>";
     } else {
@@ -428,6 +443,7 @@ echo $widget_form;
         // Default values
         var defaults = new Array();
         defaults['title'] = null;
+        defaults['suppress_filters'] = 'false';
         defaults['number_posts'] = '10';
         defaults['time_frame'] = '0';
         defaults['title_only'] = 'true';
@@ -444,7 +460,7 @@ echo $widget_form;
         defaults['auto_excerpt'] = 'false';
         defaults['full_meta'] = 'false';
         defaults['display_comments'] = 'false';
-        defaults['post_status'] = 'inherit';
+        defaults['post_status'] = 'publish';
         defaults['excerpt_trail'] = 'text';
         defaults['css_style'] = null;
         defaults['wrapper_list_css'] = 'nav nav-tabs nav-stacked';
