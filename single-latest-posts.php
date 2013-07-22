@@ -3,22 +3,16 @@
 Plugin Name: Single Latest Posts Lite
 Plugin URI: http://wordpress.org/extend/plugins/single-latest-posts-lite/
 Description: Display the latest posts available in your WordPress blog using functions, shortcodes or widgets.
-Version: 1.3
+Version: 1.4.1
 Author: L'Elite
 Author URI: http://laelite.info/
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
 */
-/***********************
-
-++++++ TERMINAR DE INTEGRAR EL FOOTER_META PARA SACAR (FALTAN WIDGET Y TINYMCE OPCIONES)
-++++++ VERSION 1.2.6
-
-************************/
 /**
  *
  * Copyright 2007 - 2013 L'Elite de José SAYAGO (opensource@laelite.info)
  * 'SLPosts Lite', 'SLPosts Pro', 'NLPosts' are unregistered trademarks of L'Elite, 
- * and cannot be re-used in conjuction with the GPL v2 usage of this software 
+ * and cannot be re-used in conjunction with the GPL v2 usage of this software 
  * under the license terms of the GPL v2 without permission.
  *
  * Single Latest Posts brings all the awesomeness available
@@ -50,6 +44,7 @@ require_once dirname( __FILE__ ) . '/single-latest-posts-config.php';
  * -- @auto_excerpt       : If true then it will generate an excerpt from the post content, it's useful for those who forget to use the Excerpt field in the post edition page
  * -- @excerpt_trail      : Set the type of trail you want to append to the excerpts: text, image. The text will be _more_, the image is inside the plugin's img directory and it's called excerpt_trail.png
  * -- @full_meta          : Display the date and the author of the post, for the date/time each blog time format will be used
+ * -- @footer_meta        : Displays footer metadata when set to true, it depends on full_meta to be true
  * -- @display_comments   : Display comments count, this parameter depends on full_meta, if full_meta is not active this parameter will not show anything even if it's active, false by default
  * -- @post_status        : Specify the status of the posts you want to display: publish, new, pending, draft, auto-draft, future, private, inherit, trash
  * -- @css_style          : Use a custom CSS style instead of the one included by default, useful if you want to customize the front-end display: filename (without extension), this file must be located where your active theme CSS style is located
@@ -497,7 +492,6 @@ function single_latest_posts( $parameters ) {
             // Count the number of pages
             $total += 1;
         }
-        echo "<script>console.log('".count($pages)."')</script>";
         // Open pagination wrapper
         echo $html_tags['pagination_o'];
         echo paginate_links( array(

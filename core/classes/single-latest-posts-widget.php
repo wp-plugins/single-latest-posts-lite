@@ -1,7 +1,7 @@
 <?php
 /*
  * Single Latest Posts Lite Widget
- * Version 1.3
+ * Version 1.4.1
  * Author L'Elite
  * Author URI http://laelite.info/
  * License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -9,7 +9,7 @@
 /* 
  * Copyright 2007 - 2013 L'Elite de José SAYAGO (opensource@laelite.info)
  * 'SLPosts Lite', 'SLPosts Pro', 'NLPosts' are unregistered trademarks of L'Elite, 
- * and cannot be re-used in conjuction with the GPL v2 usage of this software 
+ * and cannot be re-used in conjunction with the GPL v2 usage of this software 
  * under the license terms of the GPL v2 without permission.
  *
  * Single Latest Posts brings all the awesomeness available
@@ -45,6 +45,7 @@ class SLposts_Widget extends WP_Widget {
         'auto_excerpt'     => FALSE,         // Generate excerpt from content
         'excerpt_trail'    => 'text',        // Excerpt's trailing element: text, image
         'full_meta'        => FALSE,         // Display full metadata
+        'footer_meta'      => FALSE,         // Display footer metadata
         /*
          * Pagination & Sorting
          */
@@ -148,6 +149,7 @@ class SLposts_Widget extends WP_Widget {
         $instance['excerpt_length']   = (int)$new_instance['excerpt_length'];
         $instance['auto_excerpt']     = strip_tags($new_instance['auto_excerpt']);
         $instance['full_meta']        = strip_tags($new_instance['full_meta']);
+        $instance['footer_meta']      = strip_tags($new_instance['footer_meta']);
         $instance['post_status']      = strip_tags($new_instance['post_status']);
         $instance['excerpt_trail']    = strip_tags($new_instance['excerpt_trail']);
         $instance['css_style']        = strip_tags($new_instance['css_style']);
@@ -305,6 +307,21 @@ class SLposts_Widget extends WP_Widget {
                 $widget_form.= $br;
                 $widget_form.= "<select id='".$this->get_field_id('full_meta')."' name='".$this->get_field_name('full_meta')."'>";
                 if( $full_meta == 'true' ) {
+                    $widget_form.= "<option value='true' selected='selected'>" . __('Yes','trans-slp') . "</option>";
+                    $widget_form.= "<option value='false'>" . __('No','trans-slp') . "</option>";
+                } else {
+                    $widget_form.= "<option value='true'>" . __('Yes','trans-slp') . "</option>";
+                    $widget_form.= "<option value='false' selected='selected'>" . __('No','trans-slp') . "</option>";
+                }
+                $widget_form.= "</select>";
+                $widget_form.= $br;
+
+                // ---- Footer Meta
+                $widget_form.= $br;
+                $widget_form.= "<label for='".$this->get_field_id('footer_meta')."'>" . __('Footer Metadata','trans-slp') . "</label>";
+                $widget_form.= $br;
+                $widget_form.= "<select id='".$this->get_field_id('footer_meta')."' name='".$this->get_field_name('footer_meta')."'>";
+                if( $footer_meta == 'true' ) {
                     $widget_form.= "<option value='true' selected='selected'>" . __('Yes','trans-slp') . "</option>";
                     $widget_form.= "<option value='false'>" . __('No','trans-slp') . "</option>";
                 } else {

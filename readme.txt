@@ -4,7 +4,7 @@ Donate link: http://laelite.info
 Tags: recent posts, shortcode, widget, latest posts, single installation
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 1.3
+Stable tag: 1.4.1
 
 This plugin allows you to pull all the recent posts from your WordPress blog and display them the way you want
 
@@ -42,6 +42,7 @@ are passed. For more examples please visit the Network Latest Post website.
           auto_excerpt=FALSE
           excerpt_trail=text
           full_meta=FALSE
+          footer_meta=FALSE
           display_comments=FALSE
           post_status=publish
           css_style=NULL
@@ -67,6 +68,7 @@ are passed. For more examples please visit the Network Latest Post website.
 * @auto_excerpt       : If true then it will generate an excerpt from the post content, it's useful for those who forget to use the Excerpt field in the post edition page
 * @excerpt_trail      : Set the type of trail you want to append to the excerpts: text, image. The text will be _more_, the image is inside the plugin's img directory and it's called excerpt_trail.png
 * @full_meta          : Display the date and the author of the post, for the date/time each blog time format will be used
+* @footer_meta        : Display footer metadata
 * @display_comments   : Display comments count, full_meta must be active in order for this parameter to work (true to activate, false by default)
 * @post_status        : Specify the status of the posts you want to display: publish, new, pending, draft, auto-draft, future, private, inherit, trash
 * @css_style          : Use a custom CSS style instead of the one included by default, useful if you want to customize the front-end display: filename (without extension), this file must be located where your active theme CSS style is located, this parameter should be used only once by page (it will affect all shorcodes/widgets included in that page)
@@ -76,6 +78,12 @@ are passed. For more examples please visit the Network Latest Post website.
 * @suppress_filters   : This parameter is specially useful when dealing with WP_Query custom filters, if you are using a plugin like Advanced Category Excluder then you must set this value to YES/TRUE
 
 == Changelog ==
+
+= 1.4.1 =
+* Minor bug fix: removed debugging JavaScript code.
+
+= 1.4 =
+* Improvement: Added footer_meta parameter which allows to show/hide footer metadata
 
 = 1.3 =
 * Improvement: Added suppress_filters parameter for third party plugins support. This parameter when set to TRUE reset query filters.
