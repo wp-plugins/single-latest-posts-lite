@@ -4,7 +4,7 @@ Donate link: http://laelite.info
 Tags: recent posts, shortcode, widget, latest posts, single installation
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 
 This plugin allows you to pull all the recent posts from your WordPress blog and display them the way you want
 
@@ -78,6 +78,9 @@ are passed. For more examples please visit the Network Latest Post website.
 * @suppress_filters   : This parameter is specially useful when dealing with WP_Query custom filters, if you are using a plugin like Advanced Category Excluder then you must set this value to YES/TRUE
 
 == Changelog ==
+
+= 1.4.2 =
+* Bug fix: Checking if filter_where exists when using time frame and multiple instances to avoid duplicate function fatal errors.
 
 = 1.4.1 =
 * Minor bug fix: removed debugging JavaScript code.

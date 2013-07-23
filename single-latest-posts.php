@@ -3,7 +3,7 @@
 Plugin Name: Single Latest Posts Lite
 Plugin URI: http://wordpress.org/extend/plugins/single-latest-posts-lite/
 Description: Display the latest posts available in your WordPress blog using functions, shortcodes or widgets.
-Version: 1.4.1
+Version: 1.4.2
 Author: L'Elite
 Author URI: http://laelite.info/
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -1168,10 +1168,12 @@ function slp_get_posts($args = null, $time_frame) {
     if( !empty($time_frame) ) {
         // Nasty hack to access this variable from inside callback filters
         $GLOBALS['slp_time_frame'] = (int)$time_frame;
-        function filter_where( $where ) {
-            $days = (int)$GLOBALS['slp_time_frame'];
-            $where .= " AND post_date >= '".date('Y-m-d', strtotime("-$days days"))."'";
-            return $where;
+        if( !function_exists( 'filter_where' ) ) {
+            function filter_where( $where ) {
+                $days = (int)$GLOBALS['slp_time_frame'];
+                $where .= " AND post_date >= '".date('Y-m-d', strtotime("-$days days"))."'";
+                return $where;
+            }
         }
         add_filter( 'posts_where', 'filter_where' );
     }
