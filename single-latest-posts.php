@@ -3,7 +3,7 @@
 Plugin Name: Single Latest Posts Lite
 Plugin URI: http://wordpress.org/extend/plugins/single-latest-posts-lite/
 Description: Display the latest posts available in your WordPress blog using functions, shortcodes or widgets.
-Version: 1.4.2
+Version: 1.4.3
 Author: L'Elite
 Author URI: http://laelite.info/
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -245,10 +245,6 @@ function single_latest_posts( $parameters ) {
         ';
         // Close the door and get out of here
         return;
-    }
-
-    if( function_exists( 'ace_init' ) ) {
-
     }
     // Open content box
     echo $html_tags['content_o'];
@@ -520,7 +516,12 @@ function single_latest_posts( $parameters ) {
                     var link = jQuery(this).attr("href");
                     jQuery(".slp-instance-'.$instance.' .slposts-wrapper").html("<style type=\"text/css\">p.loading { text-align:center;margin:0 auto; padding:20px; }</style><p class=\"loading\"><img src=\"'.plugins_url('core/img/loader.gif', __FILE__) .'\" /></p>");
                     jQuery(".slp-instance-'.$instance.' .slposts-wrapper").fadeOut("slow",function(){
-                        jQuery(".slp-instance-'.$instance.' .slposts-wrapper").load(link+" .slp-instance-'.$instance.' .slposts-wrapper > *").fadeIn(3000);
+                        jQuery(".slp-instance-'.$instance.' .slposts-wrapper").load(link+" .slp-instance-'.$instance.' .slposts-wrapper > *").fadeIn(3000, function(){
+                            var slpOffset = jQuery( ".slposts-container" ).offset().top;
+                            jQuery("body, html").animate({
+                                scrollTop: slpOffset-100
+                            }, 200);
+                        });
                     });
 
                 });
@@ -1168,6 +1169,7 @@ function slp_get_posts($args = null, $time_frame) {
     if( !empty($time_frame) ) {
         // Nasty hack to access this variable from inside callback filters
         $GLOBALS['slp_time_frame'] = (int)$time_frame;
+        // Avoid function duplication
         if( !function_exists( 'filter_where' ) ) {
             function filter_where( $where ) {
                 $days = (int)$GLOBALS['slp_time_frame'];

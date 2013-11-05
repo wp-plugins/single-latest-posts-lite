@@ -1,7 +1,7 @@
 <?php
 /*
  * Single Latest Posts Lite Widget
- * Version 1.4.1
+ * Version 1.4.3
  * Author L'Elite
  * Author URI http://laelite.info/
  * License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html

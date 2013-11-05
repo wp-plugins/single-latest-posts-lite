@@ -1,23 +1,19 @@
-/*
-    Network Latest Posts TinyMCE Plugin
-    Version 1.0
-    Author L'Elite
-    Author URI https://laelite.info/
+/**
+ * Single Latest Posts TinyMCE Plugin
+ * Version: 1.2.5
+ * Author: L'Elite
+ * Author URI: http://laelite.info/
+ * License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
  */
-/*  Copyright 2012  L'Elite (email : opensource@laelite.info)
-
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as
-    published by the Free Software Foundation.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+/* 
+ * Copyright 2007 - 2013 L'Elite de José SAYAGO (opensource@laelite.info)
+ * 'SLPosts Lite', 'SLPosts Pro', 'NLPosts' are unregistered trademarks of L'Elite, 
+ * and cannot be re-used in conjuction with the GPL v2 usage of this software 
+ * under the license terms of the GPL v2 without permission.
+ *
+ * Single Latest Posts brings all the awesomeness available
+ * in Network Latest Posts to individual WordPress installations.
+ *
  */
 (function() {
     // Set the plugin

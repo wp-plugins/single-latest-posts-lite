@@ -1,7 +1,7 @@
 <?php
 /*
  * Single Latest Posts Lite Shortcode Form
- * Version 1.3
+ * Version 1.4
  * Author L'Elite
  * Author URI http://laelite.info/
  * License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -9,7 +9,7 @@
 /* 
  * Copyright 2007 - 2012 L'Elite de José SAYAGO (opensource@laelite.info)
  * 'SLPosts Lite', 'SLPosts Pro', 'NLPosts' are unregistered trademarks of L'Elite, 
- * and cannot be re-used in conjuction with the GPL v2 usage of this software 
+ * and cannot be re-used in conjunction with the GPL v2 usage of this software 
  * under the license terms of the GPL v2 without permission.
  *
  * Single Latest Posts brings all the awesomeness available
@@ -70,6 +70,7 @@ $defaults = array(
     'auto_excerpt'     => FALSE,         // Generate excerpt from content
     'excerpt_trail'    => 'text',        // Excerpt's trailing element: text, image
     'full_meta'        => FALSE,         // Display full metadata
+    'footer_meta'      => FALSE,         // Display footer metadata
     'display_comments' => FALSE,         // Display comments (true or false)
     'post_status'      => 'publish',     // Post status (publish, new, pending, draft, auto-draft, future, private, inherit, trash)
     'css_style'        => NULL,          // Custom CSS _filename_ (ex: custom_style)
@@ -232,6 +233,20 @@ $widget_form.= "<div id='tab2'>";
     $widget_form.= $br;
     $widget_form.= "<select id='full_meta' name='full_meta'>";
     if( $full_meta == 'true' ) {
+        $widget_form.= "<option value='true' selected='selected'>" . __('Yes','trans-slp') . "</option>";
+        $widget_form.= "<option value='false'>" . __('No','trans-slp') . "</option>";
+    } else {
+        $widget_form.= "<option value='true'>" . __('Yes','trans-slp') . "</option>";
+        $widget_form.= "<option value='false' selected='selected'>" . __('No','trans-slp') . "</option>";
+    }
+    $widget_form.= "</select>";
+
+    // ---- Footer Meta
+    $widget_form.= $br;
+    $widget_form.= "<label for='footer_meta'>" . __('Footer Metadata','trans-slp') . "</label>";
+    $widget_form.= $br;
+    $widget_form.= "<select id='footer_meta' name='footer_meta'>";
+    if( $footer_meta == 'true' ) {
         $widget_form.= "<option value='true' selected='selected'>" . __('Yes','trans-slp') . "</option>";
         $widget_form.= "<option value='false'>" . __('No','trans-slp') . "</option>";
     } else {
@@ -459,6 +474,7 @@ echo $widget_form;
         defaults['excerpt_length'] = null;
         defaults['auto_excerpt'] = 'false';
         defaults['full_meta'] = 'false';
+        defaults['footer_meta'] = 'false';
         defaults['display_comments'] = 'false';
         defaults['post_status'] = 'publish';
         defaults['excerpt_trail'] = 'text';

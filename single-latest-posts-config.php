@@ -20,7 +20,7 @@
 $slp_root = dirname( __FILE__ );
 define( 'SLPosts_Root', $slp_root, true );
 // Current Version
-define( 'SLPosts_Version', '1.4.1', true );
+define( 'SLPosts_Version', '1.4.3', true );
 // Classes
 require_once dirname( __FILE__ ) . '/core/classes/single-latest-posts-widget.php';
 ?>

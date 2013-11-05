@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Single Latest Posts v1.0\n"
-"POT-Creation-Date: 2013-06-17 00:43-0430\n"
-"PO-Revision-Date: 2013-06-17 00:47-0430\n"
+"POT-Creation-Date: 2013-06-17 10:30-0430\n"
+"PO-Revision-Date: 2013-06-17 10:30-0430\n"
 "Last-Translator: Jose Luis Sayago Rojas <jose.sayago@laelite.info>\n"
 "Language-Team: L'Elite <opensource@laelite.info>\n"
 "Language: fr_FR\n"
@@ -76,49 +76,24 @@ msgstr "lire le reste"
 msgid "Single Latest Posts"
 msgstr "Single Latest Posts"
 
-#: ../core/classes/single-latest-posts-widget.php:75
+#: ../core/classes/single-latest-posts-widget.php:76
 msgid "Single Latest Posts Lite Widget"
 msgstr "Single Latest Posts Lite Widget"
 
-#: ../core/classes/single-latest-posts-widget.php:184
-#: ../core/js/slposts_shortcode_form.php:100
+#: ../core/classes/single-latest-posts-widget.php:185
+#: ../core/js/slposts_shortcode_form.php:101
 msgid "General Settings"
 msgstr "Configurations Générales"
 
-#: ../core/classes/single-latest-posts-widget.php:189
-#: ../core/js/slposts_shortcode_form.php:113
+#: ../core/classes/single-latest-posts-widget.php:190
+#: ../core/js/slposts_shortcode_form.php:114
 msgid "Title"
 msgstr "Titre"
 
-#: ../core/classes/single-latest-posts-widget.php:195
-#: ../core/js/slposts_shortcode_form.php:119
+#: ../core/classes/single-latest-posts-widget.php:196
+#: ../core/js/slposts_shortcode_form.php:120
 msgid "Titles Only"
 msgstr "Titres Seulement"
-
-#: ../core/classes/single-latest-posts-widget.php:199
-#: ../core/classes/single-latest-posts-widget.php:202
-#: ../core/classes/single-latest-posts-widget.php:213
-#: ../core/classes/single-latest-posts-widget.php:216
-#: ../core/classes/single-latest-posts-widget.php:280
-#: ../core/classes/single-latest-posts-widget.php:283
-#: ../core/classes/single-latest-posts-widget.php:308
-#: ../core/classes/single-latest-posts-widget.php:311
-#: ../core/classes/single-latest-posts-widget.php:329
-#: ../core/classes/single-latest-posts-widget.php:332
-#: ../core/js/slposts_shortcode_form.php:123
-#: ../core/js/slposts_shortcode_form.php:126
-#: ../core/js/slposts_shortcode_form.php:137
-#: ../core/js/slposts_shortcode_form.php:140
-#: ../core/js/slposts_shortcode_form.php:207
-#: ../core/js/slposts_shortcode_form.php:210
-#: ../core/js/slposts_shortcode_form.php:235
-#: ../core/js/slposts_shortcode_form.php:238
-#: ../core/js/slposts_shortcode_form.php:249
-#: ../core/js/slposts_shortcode_form.php:252
-#: ../core/js/slposts_shortcode_form.php:271
-#: ../core/js/slposts_shortcode_form.php:274
-msgid "Yes"
-msgstr "Oui"
 
 #: ../core/classes/single-latest-posts-widget.php:200
 #: ../core/classes/single-latest-posts-widget.php:203
@@ -128,8 +103,10 @@ msgstr "Oui"
 #: ../core/classes/single-latest-posts-widget.php:284
 #: ../core/classes/single-latest-posts-widget.php:309
 #: ../core/classes/single-latest-posts-widget.php:312
-#: ../core/classes/single-latest-posts-widget.php:330
-#: ../core/classes/single-latest-posts-widget.php:333
+#: ../core/classes/single-latest-posts-widget.php:324
+#: ../core/classes/single-latest-posts-widget.php:327
+#: ../core/classes/single-latest-posts-widget.php:345
+#: ../core/classes/single-latest-posts-widget.php:348
 #: ../core/js/slposts_shortcode_form.php:124
 #: ../core/js/slposts_shortcode_form.php:127
 #: ../core/js/slposts_shortcode_form.php:138
@@ -140,258 +117,294 @@ msgstr "Oui"
 #: ../core/js/slposts_shortcode_form.php:239
 #: ../core/js/slposts_shortcode_form.php:250
 #: ../core/js/slposts_shortcode_form.php:253
-#: ../core/js/slposts_shortcode_form.php:272
-#: ../core/js/slposts_shortcode_form.php:275
+#: ../core/js/slposts_shortcode_form.php:264
+#: ../core/js/slposts_shortcode_form.php:267
+#: ../core/js/slposts_shortcode_form.php:286
+#: ../core/js/slposts_shortcode_form.php:289
+msgid "Yes"
+msgstr "Oui"
+
+#: ../core/classes/single-latest-posts-widget.php:201
+#: ../core/classes/single-latest-posts-widget.php:204
+#: ../core/classes/single-latest-posts-widget.php:215
+#: ../core/classes/single-latest-posts-widget.php:218
+#: ../core/classes/single-latest-posts-widget.php:282
+#: ../core/classes/single-latest-posts-widget.php:285
+#: ../core/classes/single-latest-posts-widget.php:310
+#: ../core/classes/single-latest-posts-widget.php:313
+#: ../core/classes/single-latest-posts-widget.php:325
+#: ../core/classes/single-latest-posts-widget.php:328
+#: ../core/classes/single-latest-posts-widget.php:346
+#: ../core/classes/single-latest-posts-widget.php:349
+#: ../core/js/slposts_shortcode_form.php:125
+#: ../core/js/slposts_shortcode_form.php:128
+#: ../core/js/slposts_shortcode_form.php:139
+#: ../core/js/slposts_shortcode_form.php:142
+#: ../core/js/slposts_shortcode_form.php:209
+#: ../core/js/slposts_shortcode_form.php:212
+#: ../core/js/slposts_shortcode_form.php:237
+#: ../core/js/slposts_shortcode_form.php:240
+#: ../core/js/slposts_shortcode_form.php:251
+#: ../core/js/slposts_shortcode_form.php:254
+#: ../core/js/slposts_shortcode_form.php:265
+#: ../core/js/slposts_shortcode_form.php:268
+#: ../core/js/slposts_shortcode_form.php:287
+#: ../core/js/slposts_shortcode_form.php:290
 msgid "No"
 msgstr "Non"
 
-#: ../core/classes/single-latest-posts-widget.php:209
-#: ../core/js/slposts_shortcode_form.php:133
+#: ../core/classes/single-latest-posts-widget.php:210
+#: ../core/js/slposts_shortcode_form.php:134
 msgid "Suppress Query Filters"
 msgstr "Nettoyer le Filtre de Requêtes"
 
-#: ../core/classes/single-latest-posts-widget.php:225
+#: ../core/classes/single-latest-posts-widget.php:226
 msgid "Posts Settings"
 msgstr "Configurations d'Articles"
 
-#: ../core/classes/single-latest-posts-widget.php:230
-#: ../core/js/slposts_shortcode_form.php:160
+#: ../core/classes/single-latest-posts-widget.php:231
+#: ../core/js/slposts_shortcode_form.php:161
 msgid "Number of Posts"
 msgstr "Nombre d'Articles"
 
-#: ../core/classes/single-latest-posts-widget.php:236
-#: ../core/js/slposts_shortcode_form.php:166
+#: ../core/classes/single-latest-posts-widget.php:237
+#: ../core/js/slposts_shortcode_form.php:167
 msgid "Time Frame in Days"
 msgstr "Nombre de Jours de Publication"
 
-#: ../core/classes/single-latest-posts-widget.php:242
-#: ../core/js/slposts_shortcode_form.php:173
+#: ../core/classes/single-latest-posts-widget.php:243
+#: ../core/js/slposts_shortcode_form.php:174
 msgid "Post Status"
 msgstr "État des Articles"
 
-#: ../core/classes/single-latest-posts-widget.php:258
-#: ../core/js/slposts_shortcode_form.php:185
+#: ../core/classes/single-latest-posts-widget.php:259
+#: ../core/js/slposts_shortcode_form.php:186
 msgid "Category"
 msgstr "Catégorie"
 
-#: ../core/classes/single-latest-posts-widget.php:264
-#: ../core/js/slposts_shortcode_form.php:191
+#: ../core/classes/single-latest-posts-widget.php:265
+#: ../core/js/slposts_shortcode_form.php:192
 msgid "Tag"
 msgstr "Étiquette"
 
-#: ../core/classes/single-latest-posts-widget.php:270
-#: ../core/js/slposts_shortcode_form.php:197
+#: ../core/classes/single-latest-posts-widget.php:271
+#: ../core/js/slposts_shortcode_form.php:198
 msgid "Excerpt Length"
 msgstr "Longueur des extraits"
 
-#: ../core/classes/single-latest-posts-widget.php:276
-#: ../core/js/slposts_shortcode_form.php:203
+#: ../core/classes/single-latest-posts-widget.php:277
+#: ../core/js/slposts_shortcode_form.php:204
 msgid "Auto-Excerpt"
 msgstr "Extraits automatiques"
 
-#: ../core/classes/single-latest-posts-widget.php:290
-#: ../core/js/slposts_shortcode_form.php:217
+#: ../core/classes/single-latest-posts-widget.php:291
+#: ../core/js/slposts_shortcode_form.php:218
 msgid "Excerpt Trail"
 msgstr "Lien de l'extrait"
-
-#: ../core/classes/single-latest-posts-widget.php:294
-#: ../core/classes/single-latest-posts-widget.php:297
-#: ../core/js/slposts_shortcode_form.php:221
-#: ../core/js/slposts_shortcode_form.php:224
-msgid "Text"
-msgstr "Texte"
 
 #: ../core/classes/single-latest-posts-widget.php:295
 #: ../core/classes/single-latest-posts-widget.php:298
 #: ../core/js/slposts_shortcode_form.php:222
 #: ../core/js/slposts_shortcode_form.php:225
+msgid "Text"
+msgstr "Texte"
+
+#: ../core/classes/single-latest-posts-widget.php:296
+#: ../core/classes/single-latest-posts-widget.php:299
+#: ../core/js/slposts_shortcode_form.php:223
+#: ../core/js/slposts_shortcode_form.php:226
 msgid "Image"
 msgstr "Image"
 
-#: ../core/classes/single-latest-posts-widget.php:304
-#: ../core/js/slposts_shortcode_form.php:231
+#: ../core/classes/single-latest-posts-widget.php:305
+#: ../core/js/slposts_shortcode_form.php:232
 msgid "Full Metadata"
 msgstr "Métadonnées Complètes"
 
 #: ../core/classes/single-latest-posts-widget.php:320
+#: ../core/js/slposts_shortcode_form.php:246
+msgid "Footer Metadata"
+msgstr "Métadonnées au Pied"
+
+#: ../core/classes/single-latest-posts-widget.php:336
 msgid "Pagination & Sorting"
 msgstr "Pagination et Tri"
 
-#: ../core/classes/single-latest-posts-widget.php:325
-#: ../core/js/slposts_shortcode_form.php:267
+#: ../core/classes/single-latest-posts-widget.php:341
+#: ../core/js/slposts_shortcode_form.php:282
 msgid "Paginate Results"
 msgstr "Resultats par Page"
 
-#: ../core/classes/single-latest-posts-widget.php:339
-#: ../core/js/slposts_shortcode_form.php:281
+#: ../core/classes/single-latest-posts-widget.php:355
+#: ../core/js/slposts_shortcode_form.php:296
 msgid "Posts per Page"
 msgstr "Articles par Page"
 
-#: ../core/classes/single-latest-posts-widget.php:346
-#: ../core/js/slposts_shortcode_form.php:103
+#: ../core/classes/single-latest-posts-widget.php:362
+#: ../core/js/slposts_shortcode_form.php:104
 msgid "Thumbnails"
 msgstr "Vignettes"
 
-#: ../core/classes/single-latest-posts-widget.php:351
-#: ../core/js/slposts_shortcode_form.php:296
+#: ../core/classes/single-latest-posts-widget.php:367
+#: ../core/js/slposts_shortcode_form.php:311
 msgid "Display Thumbnails"
 msgstr "Afficher les Vignettes"
 
-#: ../core/classes/single-latest-posts-widget.php:355
-#: ../core/classes/single-latest-posts-widget.php:358
-#: ../core/js/slposts_shortcode_form.php:300
-#: ../core/js/slposts_shortcode_form.php:303
+#: ../core/classes/single-latest-posts-widget.php:371
+#: ../core/classes/single-latest-posts-widget.php:374
+#: ../core/js/slposts_shortcode_form.php:315
+#: ../core/js/slposts_shortcode_form.php:318
 msgid "Show"
 msgstr "Afficher"
 
-#: ../core/classes/single-latest-posts-widget.php:356
-#: ../core/classes/single-latest-posts-widget.php:359
-#: ../core/js/slposts_shortcode_form.php:301
-#: ../core/js/slposts_shortcode_form.php:304
+#: ../core/classes/single-latest-posts-widget.php:372
+#: ../core/classes/single-latest-posts-widget.php:375
+#: ../core/js/slposts_shortcode_form.php:316
+#: ../core/js/slposts_shortcode_form.php:319
 msgid "Hide"
 msgstr "Cacher"
 
-#: ../core/classes/single-latest-posts-widget.php:366
-#: ../core/js/slposts_shortcode_form.php:311
+#: ../core/classes/single-latest-posts-widget.php:382
+#: ../core/js/slposts_shortcode_form.php:326
 msgid "Thumbnail Size"
 msgstr "Taille des Vignettes"
 
-#: ../core/classes/single-latest-posts-widget.php:367
-#: ../core/js/slposts_shortcode_form.php:312
+#: ../core/classes/single-latest-posts-widget.php:383
+#: ../core/js/slposts_shortcode_form.php:327
 msgid "Width"
 msgstr "Largeur"
 
-#: ../core/classes/single-latest-posts-widget.php:371
-#: ../core/js/slposts_shortcode_form.php:316
+#: ../core/classes/single-latest-posts-widget.php:387
+#: ../core/js/slposts_shortcode_form.php:331
 msgid "Height"
 msgstr "Hauteur"
 
-#: ../core/classes/single-latest-posts-widget.php:377
-#: ../core/js/slposts_shortcode_form.php:322
+#: ../core/classes/single-latest-posts-widget.php:393
+#: ../core/js/slposts_shortcode_form.php:337
 msgid "Thumbnail Replacement"
 msgstr "Vignettes de Remplacement"
 
-#: ../core/classes/single-latest-posts-widget.php:382
-#: ../core/classes/single-latest-posts-widget.php:387
-#: ../core/classes/single-latest-posts-widget.php:392
-#: ../core/classes/single-latest-posts-widget.php:397
-#: ../core/js/slposts_shortcode_form.php:327
-#: ../core/js/slposts_shortcode_form.php:332
-#: ../core/js/slposts_shortcode_form.php:337
+#: ../core/classes/single-latest-posts-widget.php:398
+#: ../core/classes/single-latest-posts-widget.php:403
+#: ../core/classes/single-latest-posts-widget.php:408
+#: ../core/classes/single-latest-posts-widget.php:413
 #: ../core/js/slposts_shortcode_form.php:342
+#: ../core/js/slposts_shortcode_form.php:347
+#: ../core/js/slposts_shortcode_form.php:352
+#: ../core/js/slposts_shortcode_form.php:357
 msgid "Placeholder"
 msgstr "Cadre Gris"
 
-#: ../core/classes/single-latest-posts-widget.php:383
-#: ../core/classes/single-latest-posts-widget.php:388
-#: ../core/classes/single-latest-posts-widget.php:393
-#: ../core/classes/single-latest-posts-widget.php:398
-#: ../core/js/slposts_shortcode_form.php:328
-#: ../core/js/slposts_shortcode_form.php:333
-#: ../core/js/slposts_shortcode_form.php:338
+#: ../core/classes/single-latest-posts-widget.php:399
+#: ../core/classes/single-latest-posts-widget.php:404
+#: ../core/classes/single-latest-posts-widget.php:409
+#: ../core/classes/single-latest-posts-widget.php:414
 #: ../core/js/slposts_shortcode_form.php:343
+#: ../core/js/slposts_shortcode_form.php:348
+#: ../core/js/slposts_shortcode_form.php:353
+#: ../core/js/slposts_shortcode_form.php:358
 msgid "Kittens"
 msgstr "Chatons"
 
-#: ../core/classes/single-latest-posts-widget.php:384
-#: ../core/classes/single-latest-posts-widget.php:389
-#: ../core/classes/single-latest-posts-widget.php:394
-#: ../core/classes/single-latest-posts-widget.php:399
-#: ../core/js/slposts_shortcode_form.php:329
-#: ../core/js/slposts_shortcode_form.php:334
-#: ../core/js/slposts_shortcode_form.php:339
+#: ../core/classes/single-latest-posts-widget.php:400
+#: ../core/classes/single-latest-posts-widget.php:405
+#: ../core/classes/single-latest-posts-widget.php:410
+#: ../core/classes/single-latest-posts-widget.php:415
 #: ../core/js/slposts_shortcode_form.php:344
+#: ../core/js/slposts_shortcode_form.php:349
+#: ../core/js/slposts_shortcode_form.php:354
+#: ../core/js/slposts_shortcode_form.php:359
 msgid "Puppies"
 msgstr "Chiots"
 
-#: ../core/classes/single-latest-posts-widget.php:406
-#: ../core/js/slposts_shortcode_form.php:351
+#: ../core/classes/single-latest-posts-widget.php:422
+#: ../core/js/slposts_shortcode_form.php:366
 msgid "Thumbnail Class"
 msgstr "Classe CSS des Vignettes"
 
-#: ../core/classes/single-latest-posts-widget.php:414
-#: ../core/js/slposts_shortcode_form.php:104
+#: ../core/classes/single-latest-posts-widget.php:430
+#: ../core/js/slposts_shortcode_form.php:105
 msgid "Style Settings"
 msgstr "Configurations de Style"
 
-#: ../core/classes/single-latest-posts-widget.php:419
-#: ../core/js/slposts_shortcode_form.php:364
+#: ../core/classes/single-latest-posts-widget.php:435
+#: ../core/js/slposts_shortcode_form.php:379
 msgid "Display Type"
 msgstr "Type d'Affichage"
 
-#: ../core/classes/single-latest-posts-widget.php:425
-#: ../core/classes/single-latest-posts-widget.php:431
-#: ../core/classes/single-latest-posts-widget.php:437
-#: ../core/classes/single-latest-posts-widget.php:443
-#: ../core/js/slposts_shortcode_form.php:370
-#: ../core/js/slposts_shortcode_form.php:376
-#: ../core/js/slposts_shortcode_form.php:382
-#: ../core/js/slposts_shortcode_form.php:388
+#: ../core/classes/single-latest-posts-widget.php:441
+#: ../core/classes/single-latest-posts-widget.php:447
+#: ../core/classes/single-latest-posts-widget.php:453
+#: ../core/classes/single-latest-posts-widget.php:459
+#: ../core/js/slposts_shortcode_form.php:385
+#: ../core/js/slposts_shortcode_form.php:391
+#: ../core/js/slposts_shortcode_form.php:397
+#: ../core/js/slposts_shortcode_form.php:403
 msgid "Unordered List"
 msgstr "Liste non Ordonnée"
 
-#: ../core/classes/single-latest-posts-widget.php:426
-#: ../core/classes/single-latest-posts-widget.php:432
-#: ../core/classes/single-latest-posts-widget.php:438
-#: ../core/classes/single-latest-posts-widget.php:444
-#: ../core/js/slposts_shortcode_form.php:371
-#: ../core/js/slposts_shortcode_form.php:377
-#: ../core/js/slposts_shortcode_form.php:383
-#: ../core/js/slposts_shortcode_form.php:389
+#: ../core/classes/single-latest-posts-widget.php:442
+#: ../core/classes/single-latest-posts-widget.php:448
+#: ../core/classes/single-latest-posts-widget.php:454
+#: ../core/classes/single-latest-posts-widget.php:460
+#: ../core/js/slposts_shortcode_form.php:386
+#: ../core/js/slposts_shortcode_form.php:392
+#: ../core/js/slposts_shortcode_form.php:398
+#: ../core/js/slposts_shortcode_form.php:404
 msgid "Ordered List"
 msgstr "Liste Ordonnée"
 
-#: ../core/classes/single-latest-posts-widget.php:427
-#: ../core/classes/single-latest-posts-widget.php:433
-#: ../core/classes/single-latest-posts-widget.php:439
-#: ../core/classes/single-latest-posts-widget.php:445
-#: ../core/js/slposts_shortcode_form.php:372
-#: ../core/js/slposts_shortcode_form.php:378
-#: ../core/js/slposts_shortcode_form.php:384
-#: ../core/js/slposts_shortcode_form.php:390
+#: ../core/classes/single-latest-posts-widget.php:443
+#: ../core/classes/single-latest-posts-widget.php:449
+#: ../core/classes/single-latest-posts-widget.php:455
+#: ../core/classes/single-latest-posts-widget.php:461
+#: ../core/js/slposts_shortcode_form.php:387
+#: ../core/js/slposts_shortcode_form.php:393
+#: ../core/js/slposts_shortcode_form.php:399
+#: ../core/js/slposts_shortcode_form.php:405
 msgid "Blocks"
 msgstr "Blocs"
 
-#: ../core/classes/single-latest-posts-widget.php:452
-#: ../core/js/slposts_shortcode_form.php:397
+#: ../core/classes/single-latest-posts-widget.php:468
+#: ../core/js/slposts_shortcode_form.php:412
 msgid "Custom CSS Filename"
 msgstr "Nom de la Feuille de Style Personnalisée"
 
-#: ../core/classes/single-latest-posts-widget.php:458
-#: ../core/js/slposts_shortcode_form.php:403
+#: ../core/classes/single-latest-posts-widget.php:474
+#: ../core/js/slposts_shortcode_form.php:418
 msgid "Custom CSS Class for the list wrapper"
 msgstr "Classe CSS pour la balise que contient les listes (wrapper)"
 
-#: ../core/classes/single-latest-posts-widget.php:464
-#: ../core/js/slposts_shortcode_form.php:409
+#: ../core/classes/single-latest-posts-widget.php:480
+#: ../core/js/slposts_shortcode_form.php:424
 msgid "Custom CSS Class for the block wrapper"
 msgstr "Classe CSS pour la balise que contient les blocs (wrapper)"
 
-#: ../core/js/slposts_shortcode_form.php:95
+#: ../core/js/slposts_shortcode_form.php:96
 msgid "Single Latest Posts Shortcode Settings"
 msgstr "Configurations du Shortcode"
 
-#: ../core/js/slposts_shortcode_form.php:101
+#: ../core/js/slposts_shortcode_form.php:102
 msgid "Posts"
 msgstr "Articles"
 
-#: ../core/js/slposts_shortcode_form.php:102
+#: ../core/js/slposts_shortcode_form.php:103
 msgid "Pagination"
 msgstr "Pagination"
 
-#: ../core/js/slposts_shortcode_form.php:147
+#: ../core/js/slposts_shortcode_form.php:148
 msgid "Instance Identifier"
 msgstr "Identificateur de l'instance"
 
-#: ../core/js/slposts_shortcode_form.php:152
-#: ../core/js/slposts_shortcode_form.php:258
-#: ../core/js/slposts_shortcode_form.php:286
-#: ../core/js/slposts_shortcode_form.php:356
-#: ../core/js/slposts_shortcode_form.php:414
+#: ../core/js/slposts_shortcode_form.php:153
+#: ../core/js/slposts_shortcode_form.php:273
+#: ../core/js/slposts_shortcode_form.php:301
+#: ../core/js/slposts_shortcode_form.php:371
+#: ../core/js/slposts_shortcode_form.php:429
 msgid "Insert Shortcode"
 msgstr "Insérer Shortcode"
 
-#: ../core/js/slposts_shortcode_form.php:245
+#: ../core/js/slposts_shortcode_form.php:260
 msgid "Display Comments"
 msgstr "Afficher le Nombre de Commentaires"
 
