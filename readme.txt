@@ -1,5 +1,5 @@
 === Single Latest Posts Lite ===
-Contributors: L'Elite
+Contributors: iluminatus
 Donate link: http://laelite.info
 Tags: recent posts, shortcode, widget, latest posts, single installation
 Requires at least: 3.0
