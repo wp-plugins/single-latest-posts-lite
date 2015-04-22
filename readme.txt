@@ -3,7 +3,7 @@ Contributors: iluminatus
 Donate link: http://laelite.info
 Tags: recent posts, shortcode, widget, latest posts, single installation
 Requires at least: 3.0
-Tested up to: 4.0
+Tested up to: 4.2
 Stable tag: 1.4.3
 
 This plugin allows you to pull all the recent posts from your WordPress blog and display them the way you want
